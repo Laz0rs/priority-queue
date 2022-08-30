@@ -2,15 +2,18 @@
 
 namespace Laz0r\PriorityQueue;
 
+use Iterator;
 use Laminas\Stdlib\SplPriorityQueue;
 use Laz0r\Util\AbstractIteratorIterator;
-use Iterator;
 
 /**
  * @template-implements \Iterator<int, mixed>
  */
 abstract class AbstractPriorityQueueIterator extends AbstractIteratorIterator implements Iterator {
 
+	/**
+	 * @param \Laminas\Stdlib\SplPriorityQueue $Queue
+	 */
 	public function __construct(SplPriorityQueue $Queue) {
 		$Queue = clone $Queue;
 

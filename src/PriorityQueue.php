@@ -8,6 +8,9 @@ class PriorityQueue extends AbstractConstructOnce implements PriorityQueueInterf
 
 	private BasePriorityQueue $PriorityQueue;
 
+	/**
+	 * @param \Laz0r\PriorityQueue\BasePriorityQueue|null $PriorityQueue
+	 */
 	public function __construct(?BasePriorityQueue $PriorityQueue = null) {
 		parent::__construct();
 

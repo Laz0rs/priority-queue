@@ -15,9 +15,9 @@ interface PriorityQueueInterface extends IteratorAggregate {
 	 * Priority defaults to 1 (low priority) if none provided.
 	 *
 	 * @param mixed $data
-	 * @param int   $priority
+	 * @param int $priority
 	 *
-	 * @return self
+	 * @return $this
 	 */
 	public function insert($data, int $priority = 1): self;
 
