@@ -2,17 +2,26 @@
 
 namespace Laz0r\PriorityQueue;
 
-use Laminas\Stdlib\PriorityQueue;
+use Laminas\Stdlib\{PriorityQueue, SplPriorityQueue};
 
 class BasePriorityQueue extends PriorityQueue {
 
 	public function __construct() {
-		// prevent changing internal queue class and avoid a Psalm error
-		$this->queue = $this->getQueue();
+		/** @psalm-var \SplPriorityQueue<int, mixed> $Queue */
+		$Queue = $this->getQueue();
+
+		$this->queue = $Queue;
 	}
 
+	/**
+	 * @return \Laminas\Stdlib\SplPriorityQueue
+	 */
 	public function getQueue() {
-		return parent::getQueue();
+		$Ret = parent::getQueue();
+
+		assert($Ret instanceof SplPriorityQueue);
+
+		return $Ret;
 	}
 
 }
