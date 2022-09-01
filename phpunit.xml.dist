@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<phpunit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	backupGlobals="false"
+	forceCoversAnnotation="true"
+	colors="true"
+	defaultTimeLimit="1"
+	timeoutForMediumTests="3"
+	timeoutForLargeTests="5"
+	beStrictAboutChangesToGlobalState="true"
+	beStrictAboutOutputDuringTests="true"
+	beStrictAboutTestsThatDoNotTestAnything="true"
+	beStrictAboutCoversAnnotation="true"
+	verbose="true"
+	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
+>
+	<coverage includeUncoveredFiles="true">
+		<include>
+			<directory suffix=".php">./src</directory>
+		</include>
+	</coverage>
+	<testsuites>
+		<testsuite name="PriorityQueue tests">
+			<directory>./test</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>
+<!-- vi: set ts=4 sw=4 noet: -->
