@@ -1,0 +1,44 @@
+{
+	"autoload": {
+		"psr-4": {
+			"Laz0r\\PriorityQueue\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Laz0r\\PriorityQueueTest\\": "test/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": false
+		}
+	},
+	"description": "Inverted priority queue interface and implementation",
+	"keywords": [
+		"Laz0r",
+		"priority",
+		"priority-queue",
+		"priorityqueue",
+		"splpriorityqueue"
+	],
+	"license": "MIT",
+	"name": "laz0r/priority-queue",
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/laz0rs/priority-queue"
+		}
+	],
+	"require": {
+		"laminas/laminas-stdlib": "^3.13",
+		"laz0r/util": "^1.0",
+		"php": "^7.4 || ~8.0.0 || ~8.1.0"
+	},
+	"require-dev": {
+		"fig-r/psr2r-sniffer": "^1.3",
+		"phpunit/phpunit": "9.5.16",
+		"vimeo/psalm": "^4.26"
+	},
+	"type": "library"
+}
