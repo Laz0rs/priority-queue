@@ -14,7 +14,7 @@
 			"dealerdirect/phpcodesniffer-composer-installer": false
 		}
 	},
-	"description": "Inverted priority queue interface and implementation",
+	"description": "Inverted priority queue",
 	"keywords": [
 		"Laz0r",
 		"priority",
